@@ -20,16 +20,16 @@ public class Rectangle {
         return (this.width + this.height) * 2;
     }
 
-    public String printRectangle() {
-        return "{ Area: " + this.calculateArea() +
-                ", Perimeter: " + this.calculatePerimeter() + "}";
+    public static String printRectangle(Rectangle figure) {
+        return "{ Area: " + figure.calculateArea() +
+                ", Perimeter: " + figure.calculatePerimeter() + "}";
     }
 
-    public String printTwoRectangles(Rectangle figure) {
-        double area1 = this.calculateArea();
-        double area2 = figure.calculateArea();
-        double perimeter1 = this.calculatePerimeter();
-        double perimeter2 = figure.calculatePerimeter();
+    public static String printTwoRectangles(Rectangle figure1, Rectangle figure2) {
+        double area1 = figure1.calculateArea();
+        double area2 = figure2.calculateArea();
+        double perimeter1 = figure1.calculatePerimeter();
+        double perimeter2 = figure2.calculatePerimeter();
         double areaSum = area1 + area2;
         double perimeterSum = perimeter1 + perimeter2;
 
